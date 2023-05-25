@@ -1,9 +1,15 @@
 <template>
   <h1>{{ title }}</h1>
-  <input type="text" ref="name">
-  <button @click="handleClick">click me</button>
-  <Modal />
+  <!-- <input type="text" ref="name">
+  <button @click="handleClick">click me</button> -->
+  <Modal header="Sign down for me!"/>
 </template>
+
+<script>
+export default{
+  props: ['header'],
+}
+</script>
 
 <script>
 import Modal from './components/Modal.vue'
