@@ -1,12 +1,13 @@
 <template>
     <div class="backdrop">
         <div class="modal">
+            <h1>Hi, my name is Thomas Tomska Ridgewell</h1>
             <p>and welcome back to CONTENT</p>
         </div>
     </div>
 </template>
 
-<style>
+<style scoped> /*eller sette inn en klasse indikator før ønsket styling. .modal h1*/
 .modal{
     width: 400px;
     padding: 20px;
@@ -20,5 +21,10 @@
     background: rgba(0,0,0,0.5);
     width: 100%;
     height: 100%;
+}
+ h1{
+    color: #03cfb4;
+    border: none;
+    padding: 0;
 }
 </style>
