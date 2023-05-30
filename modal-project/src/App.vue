@@ -6,7 +6,7 @@
   <div v-if="showModal">
     <Modal :header="header" :text="text" theme="sale" @close="toggleModal"/>
   </div>
-  <button @click="toggleModal">open modal</button>
+  <button @click.alt="toggleModal">open modal (alt)</button>
 </template>
 
 <script>
@@ -33,6 +33,9 @@ export default {
 
 
 <style>
+*{
+  user-select: none;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
