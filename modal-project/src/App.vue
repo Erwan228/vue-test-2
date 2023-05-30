@@ -26,7 +26,7 @@ export default {
   methods: {
     toggleModal(){
       this.showModal = !this.showModal
-    }
+    },
   }
 }
 </script>
