@@ -1,8 +1,12 @@
 <template>
   <h1>{{ title }}</h1>
+  <p>Whale cum</p>
   <!-- <input type="text" ref="name">
   <button @click="handleClick">click me</button> -->
-  <Modal :header="header" :text="text" theme="sale"/>
+  <div v-if="showModal">
+    <Modal :header="header" :text="text" theme="sale" @close="toggleModal"/>
+  </div>
+  <button @click="toggleModal">open modal</button>
 </template>
 
 <script>
@@ -16,6 +20,12 @@ export default {
       title: 'My First Vue App 8===D',
       header: 'See you last week.',
       text: 'Oh, fuck off',
+      showModal: false,
+    }
+  },
+  methods: {
+    toggleModal(){
+      this.showModal = !this.showModal
     }
   }
 }
