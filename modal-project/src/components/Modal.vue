@@ -1,11 +1,17 @@
 <template>
     <div class="backdrop">
         <div class="modal">
-            <h1>Hi, my name is Thomas Tomska Ridgewell</h1>
+            <h1>{{ header }}</h1>
             <p>and welcome back to CONTENT</p>
         </div>
     </div>
 </template>
+
+<script>
+export default {
+    props: ['header']
+}
+</script>
 
 <style scoped> /*eller sette inn en klasse indikator før ønsket styling. .modal h1*/
 .modal{
