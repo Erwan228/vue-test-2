@@ -23,7 +23,7 @@ export default {
 
 </script>
 
-<style > /*eller sette inn en klasse indikator før ønsket styling. .modal h1*/
+<style> /*scoped eller sette inn en klasse indikator før ønsket styling. .modal h1*/
 .modal{
     width: 400px;
     padding: 20px;
@@ -44,13 +44,13 @@ export default {
     padding: 0;
 }
 
-.modal.actions {
+.modal .actions {
     text-align: center;
     margin: 30px 0 10px 0;
     color: #333;
 }
 
-.modal.actions a {
+.modal .actions a {
     color: #333;
     padding: 8px;
     border: 1px solid #eee;
@@ -67,11 +67,11 @@ export default {
     color: white;
 }
 
-.modal.sale.actions {
+.modal.sale .actions {
     color: white;
 }
 
-.modal.sale.actions a {
+.modal.sale .actions a {
     color: white;
 }
 </style>
