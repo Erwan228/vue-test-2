@@ -13,7 +13,7 @@
       <p>and welcome back to #CONTENT</p>
     </Modal>
   </div>
-  <button @click.alt="toggleModal">open modal (alt)</button>
+  <button @click="toggleModal">open modal</button>
 </template>
 
 <script>
