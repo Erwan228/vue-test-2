@@ -7,6 +7,9 @@
             <div class="actions">
                 <slot name="links"></slot>
             </div>
+            <div class="derp">
+                <slot name="links2"></slot>
+            </div>
         </div>
     </div>
 </template>
@@ -73,5 +76,10 @@ export default {
 
 .modal.sale .actions a {
     color: white;
+}
+
+.modal.buy { 
+    background: #795075;
+    font-size: large;
 }
 </style>

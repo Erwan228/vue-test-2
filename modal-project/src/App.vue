@@ -3,17 +3,28 @@
   <p>Whale cum</p>
   <!-- <input type="text" ref="name">
   <button @click="handleClick">click me</button> -->
-  <div v-if="showModal">
-    <Modal theme="sale" @close="toggleModal">
+  <div v-if="showModal1">
+    <Modal theme="sale" @close="toggleModal1">
       <template v-slot:links>
         <a href="#">sign up now</a>
-        <a href="#">more info</a>
+        <a href="https://evrysome.com/" target="_blank">more info</a>
       </template>
       <h1>Hey, my name Thomas Tomska Ridgewell</h1>
       <p>and welcome back to #CONTENT</p>
     </Modal>
   </div>
-  <button @click="toggleModal">open modal</button>
+  <div v-if="showModal2"> <!--Dette er mitt forslag til utfordringen. Det var riktig! Woohoo. -->
+    <Modal theme="buy" @close="toggleModal2">
+      <template v-slot:links2>
+        <a href="#">stupid girl</a>
+        <a href="https://evrysome.com/" target="_blank">more info</a>
+      </template>
+      <h1>Hey, my name is not Thomas Tomska Ridgewell</h1>
+      <p>and welcome back to #last week</p>
+    </Modal>
+  </div>
+  <button @click="toggleModal1">open modal 1</button>
+  <button @click="toggleModal2">Ambitions</button>
 </template>
 
 <script>
@@ -25,14 +36,18 @@ export default {
   data() {
     return{
       title: 'My First Vue App 8===D',
-      header: 'See you last week.',
-      text: 'Oh, fuck off',
-      showModal: false,
+      // header: 'See you last week.',
+      // text: 'Oh, fuck off',
+      showModal1: false,
+      showModal2: false,
     }
   },
   methods: {
-    toggleModal(){
-      this.showModal = !this.showModal
+    toggleModal1(){
+      this.showModal1 = !this.showModal1
+    },
+    toggleModal2(){
+      this.showModal2 = !this.showModal2
     },
   }
 }
