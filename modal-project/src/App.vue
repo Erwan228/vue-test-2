@@ -3,7 +3,7 @@
   <p>Whale cum</p>
   <!-- <input type="text" ref="name">
   <button @click="handleClick">click me</button> -->
-  <div v-if="showModal1">
+  <teleport to=".modals" v-if="showModal1">
     <Modal theme="sale" @close="toggleModal1">
       <template v-slot:links>
         <a href="#">sign up now</a>
@@ -12,7 +12,7 @@
       <h1>Hey, my name Thomas Tomska Ridgewell</h1>
       <p>and welcome back to #CONTENT</p>
     </Modal>
-  </div>
+  </teleport>
   <div v-if="showModal2"> <!--Dette er mitt forslag til utfordringen. Det var riktig! Woohoo. -->
     <Modal theme="buy" @close="toggleModal2">
       <template v-slot:links2>
