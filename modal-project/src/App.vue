@@ -3,7 +3,7 @@
   <p>Whale cum</p>
   <!-- <input type="text" ref="name">
   <button @click="handleClick">click me</button> -->
-  <teleport to=".modals" v-if="showModal1">
+  <teleport to="#modals" v-if="showModal1">
     <Modal theme="sale" @close="toggleModal1">
       <template v-slot:links>
         <a href="#">sign up now</a>
@@ -13,7 +13,7 @@
       <p>and welcome back to #CONTENT</p>
     </Modal>
   </teleport>
-  <div v-if="showModal2"> <!--Dette er mitt forslag til utfordringen. Det var riktig! Woohoo. -->
+  <teleport to="#modals" v-if="showModal2"> <!--Dette er mitt forslag til utfordringen. Det var riktig! Woohoo. -->
     <Modal theme="buy" @close="toggleModal2">
       <template v-slot:links2>
         <a href="#">stupid girl</a>
@@ -22,7 +22,7 @@
       <h1>Hey, my name is not Thomas Tomska Ridgewell</h1>
       <p>and welcome back to #last week</p>
     </Modal>
-  </div>
+  </teleport>
   <button @click="toggleModal1">open modal 1</button>
   <button @click="toggleModal2">Ambitions</button>
 </template>
@@ -58,7 +58,7 @@ export default {
 *{
   user-select: none;
 }
-#app, .modals {
+#app, #modals {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
